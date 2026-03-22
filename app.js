@@ -357,44 +357,6 @@ app.get("/dashboard", requireBasicAuth, (req, res) => {
 </html>`);
 });
 
-// GET /logout — Clears Basic Auth session, no auth required
-// app.get("/logout", (req, res) => {
-//   // Force the browser to discard cached Basic Auth credentials
-//   // by responding 401 with a different realm, then redirecting.
-//   res.setHeader("WWW-Authenticate", 'Basic realm="logged-out"');
-//   res.status(401).send(`<!DOCTYPE html>
-// <html lang="en">
-// <head>
-//   <meta charset="UTF-8" />
-//   <meta http-equiv="refresh" content="3;url=/dashboard" />
-//   <title>Logged Out</title>
-//   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
-//   <style>
-//     body {
-//       margin: 0;
-//       min-height: 100vh;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       background: #080c10;
-//       font-family: 'Share Tech Mono', monospace;
-//       color: #4a6278;
-//       letter-spacing: .1em;
-//     }
-//     .msg { text-align: center; }
-//     .msg h2 { color: #ff6b35; font-size: 1.4rem; margin-bottom: .5rem; }
-//     .msg p  { font-size: .75rem; }
-//   </style>
-// </head>
-// <body>
-//   <div class="msg">
-//     <h2>SESSION TERMINATED</h2>
-//     <p>Redirecting to login in 3 seconds…</p>
-//   </div>
-// </body>
-// </html>`);
-// });
-
 app.get("/logout", (req, res) => {
   res.status(401).send(`
     <!DOCTYPE html>

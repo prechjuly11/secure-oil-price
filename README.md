@@ -36,7 +36,7 @@ Username: admin
 Password: energy123
 
 ### 3. GET /logout
-Shows a logged out message and redirects back to `/dashboard` after 3 seconds.
+Shows a logged out message
 
 ## Bearer Token
 
